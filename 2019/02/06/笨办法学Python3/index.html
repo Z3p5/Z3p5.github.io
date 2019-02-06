@@ -1,8 +1,23 @@
-<!DOCTYPE html><html lang="zh-cn"><head><meta name="generator" content="Hexo 3.8.0"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"><meta name="format-detection" content="telephone=no"><meta name="format-detection" content="email=no"><meta name="description"><meta name="keywords" content="Hexo, Gruntjs, Nodejs, Reactjs, Vuejs"><title>Yu'blog</title><link rel="stylesheet" href="/css/main_style.min.css"><link rel="icon" href="/favicon.ico"></head><body><input id="navi" type="checkbox"><ul class="main-navication"><li><a href="/"><span>Home</span></a></li><li><a href="https://www.baidu.com/"><span>Baidu</span></a></li><li><a href="http://blog.lyoo.xyz"><span>BlueShadow'blog</span></a></li></ul><div class="wrapper" id="wrap"><div class="post-header"><label class="navi-button" for="navi">MENU</label><img class="background" src="https://i.loli.net/2019/02/02/5c554502b195c.jpg"><div class="post-title"><h1 class="title">随笔</h1><ul class="meta"><li><i class="icon icon-author"></i></li><li><i class="icon icon-clock"></i>0 Minutes</li><li><i class="icon icon-calendar"></i>February 6, 2019</li></ul></div></div><div class="article-content" style="max-width:800px"><hr>
+<!DOCTYPE html><html lang="zh-cn"><head><meta name="generator" content="Hexo 3.8.0"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"><meta name="format-detection" content="telephone=no"><meta name="format-detection" content="email=no"><meta name="description"><meta name="keywords" content="Hexo, Gruntjs, Nodejs, Reactjs, Vuejs"><title>Yu'blog</title><link rel="stylesheet" href="/css/main_style.min.css"><link rel="icon" href="/favicon.ico"></head><body><input id="navi" type="checkbox"><ul class="main-navication"><li><a href="/"><span>Home</span></a></li><li><a href="https://www.baidu.com/"><span>Baidu</span></a></li><li><a href="http://blog.lyoo.xyz"><span>BlueShadow'blog</span></a></li></ul><div class="wrapper" id="wrap"><div class="post-header"><label class="navi-button" for="navi">MENU</label><img class="background" src="https://i.loli.net/2019/02/02/5c554502b195c.jpg"><div class="post-title"><h1 class="title">随笔</h1><ul class="meta"><li><i class="icon icon-author"></i></li><li><i class="icon icon-clock"></i>1 Minutes</li><li><i class="icon icon-calendar"></i>February 6, 2019</li></ul></div></div><div class="article-content" style="max-width:800px"><hr>
 <p>title: 笨办法学Python3（ex22）<br>date: 2019-02-06 20:55:44</p>
-<h2 id="tags-Python"><a href="#tags-Python" class="headerlink" title="tags:Python"></a>tags:Python</h2><p>要求列表之前学了什么</p>
-<p>‘<br>hjfwfdhjkjjkdnfjkwjfjwfjgjdnj<br>fwerjfirejnfjnrjegf<br>sfhjkewhnfjnewjf<br>‘</p>
-</div><div class="article-meta" style="max-width:800px"></div><div class="article-comment" style="max-width:800px"><div class="ds-thread" id="ds-thread" data-thread-key="cjrtbsug90002isud2fnov1xp" data-title="" data-url="http://yoursite.com/2019/02/06/笨办法学Python3/" site-name="ueibo"></div><script>var siteName = document.getElementById('ds-thread').getAttribute('site-name');
+<h2 id="tags-Python"><a href="#tags-Python" class="headerlink" title="tags:Python"></a>tags:Python</h2><p>应《笨办法学python3》要求，列表整理之前学的知识。</p>
+<p>-<strong>等于号</strong>：=的作用是将右边的值赋给左边的变量名。==的作用是检查左右两边的值是否相等。<br>-<strong>.format()</strong>：格式化函数。格式化具体是什么意思至今还有点模糊，现在觉得格式化就是变成符合某种格式。将字符串里嵌入变量，需要用{}，把变量放在里面，字符串还必须以f开头，f是“格式化”（format）的意思。</p>
+<pre><code>I = &apos;gzy&apos;
+print(f&quot;{I} is handsome&quot;)
+&apos;gzy is handsome&apos;
+
+
+&quot;{1} {0} {1}&quot;.format(&quot;hello&quot;, &quot;world&quot;) # 设置指定位置
+&apos;world hello world&apos; 
+
+
+print(&quot;网站名：{name}, 地址 {url}&quot;.format(name=&quot;菜鸟教程&quot;, url=&quot;www.runoob.com&quot;))#也可以设置参数
+</code></pre><p>还可以设置参数,还可以向其传输对象，还有数字格式化啥的……</p>
+<p>-<strong>转义</strong>：注意是反斜杠\<br>-<strong>input</strong>：<br>Python3.x 中 input() 函数接受一个标准输入数据，返回为 string 类型</p>
+<pre><code>a = input(&quot;输入：&quot;)
+input : 123
+</code></pre><p>-<strong>print</strong>：在print后面加，end=‘ ’，告诉print不要用换行符结束这一行跑到下一行去。无返回值。<br>objects – 复数，表示可以一次输出多个对象。输出多个对象时，需要用 , 分隔。sep – 用来间隔多个对象，默认值是一个空格。end – 用来设定以什么结尾。默认值是换行符 \n，我们可以换成其他字符串。file – 要写入的文件对象。<br>-<strong>argv模块</strong>：sys.argv 是一个包含命令行参数的列表。</p>
+</div><div class="article-meta" style="max-width:800px"></div><div class="article-comment" style="max-width:800px"><div class="ds-thread" id="ds-thread" data-thread-key="cjrte1j5c0003n4udthq056yl" data-title="" data-url="http://yoursite.com/2019/02/06/笨办法学Python3/" site-name="ueibo"></div><script>var siteName = document.getElementById('ds-thread').getAttribute('site-name');
 var duoshuoQuery = {short_name: siteName};
 (function() {
   var ds = document.createElement('script');
