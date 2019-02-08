@@ -6,14 +6,14 @@
 <li><p><strong>.format()</strong>：格式化函数。格式化具体是什么意思至今还有点模糊，现在觉得格式化就是变成符合某种格式。将字符串里嵌入变量，需要用{}，把变量放在里面，字符串还必须以f开头，f是“格式化”（format）的意思。</p>
 <pre><code>I = &apos;gzy&apos;
 print(f&quot;{I} is handsome&quot;)
- &apos;gzy is handsome&apos;
+&apos;gzy is handsome&apos;
 </code></pre></li>
 </ul>
 <pre><code>&quot;{1} {0} {1}&quot;.format(&quot;hello&quot;, &quot;world&quot;) # 设置指定位置
  &apos;world hello world&apos; 
 
-
-print(&quot;网站名：{name}, 地址 {url}&quot;.format(name=&quot;菜鸟教程&quot;, url=&quot;www.runoob.com&quot;))#也可以设置参数
+print(&quot;网站名：{name}, 地址 {url}&quot;.format(name=&quot;菜鸟教程&quot;, 
+    url=&quot;www.runoob.com&quot;))#也可以设置参数
 </code></pre><p>还可以设置参数,还可以向其传输对象，还有数字格式化啥的……</p>
 <ul>
 <li><strong>转义</strong>：注意是反斜杠\</li>
