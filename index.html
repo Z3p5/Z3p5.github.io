@@ -86,68 +86,7 @@ print (&quot;列表现在为 : &quot;, list1)
 删除的元素为 : Runoob
 列表现在为 :  [&apos;Google&apos;, &apos;Taobao&apos;]
 </code></pre><p><strong><em>返回值很重要</em></strong></p>
-</div><ul class="meta"><li><i class="icon icon-author"></i></li><li><i class="icon icon-clock"></i>1 Minutes</li><li><i class="icon icon-category"></i></li></ul></li><li> <p class="date">February 6, 2019</p><div class="no-title"><hr>
-<p>title: 笨办法学Python3（ex22）<br>date: 2019-02-06 20:55:44</p>
-<h2 id="tags-Python"><a href="#tags-Python" class="headerlink" title="tags:Python"></a>tags:Python</h2><p>应《笨办法学python3》要求，列表整理之前学的知识。</p>
-<ul>
-<li><strong>等于号</strong>：=的作用是将右边的值赋给左边的变量名。==的作用是检查左右两边的值是否相等。</li>
-<li><p><strong>.format()</strong>：格式化函数。格式化具体是什么意思至今还有点模糊，现在觉得格式化就是变成符合某种格式。将字符串里嵌入变量，需要用{}，把变量放在里面，字符串还必须以f开头，f是“格式化”（format）的意思。</p>
-<pre><code>I = &apos;gzy&apos;
-print(f&quot;{I} is handsome&quot;)
-&apos;gzy is handsome&apos;
-</code></pre></li>
-</ul>
-<pre><code>&quot;{1} {0} {1}&quot;.format(&quot;hello&quot;, &quot;world&quot;) # 设置指定位置
- &apos;world hello world&apos; 
-
-print(&quot;网站名：{name}, 地址 {url}&quot;.format(name=&quot;菜鸟教程&quot;, 
-    url=&quot;www.runoob.com&quot;))#也可以设置参数
-</code></pre><p>还可以设置参数,还可以向其传输对象，还有数字格式化啥的……</p>
-<ul>
-<li><strong>转义</strong>：注意是反斜杠\</li>
-<li><p><strong>input</strong>：<br>Python3.x 中 input() 函数接受一个标准输入数据，返回为 string 类型</p>
-<pre><code>a = input(&quot;输入：&quot;)
-input : 123
-</code></pre></li>
-<li><p><strong>print</strong>：在print后面加，end=‘ ’，告诉print不要用换行符结束这一行跑到下一行去。无返回值。<br>objects – 复数，表示可以一次输出多个对象。输出多个对象时，需要用 , 分隔。sep – 用来间隔多个对象，默认值是一个空格。end – 用来设定以什么结尾。默认值是换行符 \n，我们可以换成其他字符串。file – 要写入的文件对象。</p>
-</li>
-<li><strong>argv模块</strong>：sys.argv 是一个包含命令行参数的列表。</li>
-<li><p><strong>读取文件</strong>：open:常用形式是接收两个参数：文件名(file)和模式(mode),mode的参数又有很多。read：返回值为从字符串中读取的字节。</p>
-<pre><code>fo = open(&quot;runoob.txt&quot;, &quot;rw+&quot;)
-print  (&quot;文件名为: &quot;, fo.name)   #打开文件
-</code></pre></li>
-</ul>
-<pre><code>line = fo.read(10)
-print &quot;读取的字符串: %s&quot; % (line)
-
-
-fo.close() #关闭文件
-</code></pre><ul>
-<li><p><strong>读写文件</strong>：close：关闭文件，相当于“保存”。read：读取文件的内容，可以把结果赋给一个变量。readline：只读取文本文件中的一行。truncate：清空文件。write（‘stuff’）：将“stuff”写入文件。seek（0）：将读写位置移动到文件开头。</p>
-</li>
-<li><p><strong>exists模块</strong>：判断指定文件名是否存在。python还有很多方式判断文件/目录是否存在。</p>
-</li>
-<li><p><strong>更帅的文件操作</strong>：用echo创建文件：  echo “This is a test file.”  &gt;  test.txt<br>用cat命令显示文件内容：  cat test.txt     </p>
-</li>
-<li><p><strong>函数</strong>：函数可以干的三件事：1.它们给代码段命名。2.它们可以接收参数。3.利用上面的1和2，它们可以让你创建”迷你脚本”或者“小命令”。</p>
-</li>
-<li><p><strong>def</strong>：一般格式：</p>
-<pre><code>def 函数名（参数列表）：
-     函数体
-</code></pre></li>
-</ul>
-<p>定义函数的简单规则：<br>函数代码块以 def 关键词开头，后接函数标识符名称和圆括号 ()。<br>任何传入参数和自变量必须放在圆括号中间，圆括号之间可以用于定义参数。<br>函数的第一行语句可以选择性地使用文档字符串—用于存放函数说明。<br>函数内容以冒号起始，并且缩进。<br>return [表达式] 结束函数，选择性地返回一个值给调用方。不带表达式的return相当于返回 None。</p>
-<p>函数调用：<br>定义一个函数：给了函数一个名称，指定了函数里包含的参数，和代码块结构。这个函数的基本结构完成以后，你可以通过另一个函数调用执行，也可以直接从 Python 命令提示符执行。</p>
-</div><ul class="meta"><li><i class="icon icon-author"></i></li><li><i class="icon icon-clock"></i>2 Minutes</li><li><i class="icon icon-category"></i></li></ul></li><li> <p class="date">February 5, 2019</p><div class="no-title"><hr>
-<p>title: hexo丢了吓劳资一跳<br>date: 2019-02-05 18:22:11</p>
-<h2 id="tags-糟心"><a href="#tags-糟心" class="headerlink" title="tags:糟心"></a>tags:糟心</h2><p>今天想改一下博客的网站图标，hexo g出现bash:hexo:command not found<br>我以为坑爹爹的win10给我把hexo自动删除了，然后问度娘才得知是我前几天配置java环境的时候把hexo的环境变量搞坏了。。。改回来就好了，还好数据没丢失。<br><img src="https://i.loli.net/2019/02/05/5c59742e15500.png" alt="path配置"></p>
-</div><ul class="meta"><li><i class="icon icon-author"></i></li><li><i class="icon icon-clock"></i>0 Minutes</li><li><i class="icon icon-category"></i></li></ul></li><li> <p class="date">February 2, 2019</p><div class="no-title"><hr>
-<p>title: 寒假学习计划<br>date: 2019-02-02 22:13:21</p>
-<h2 id="tags-计划"><a href="#tags-计划" class="headerlink" title="tags:计划"></a>tags:计划</h2><p>学习方向因为弃坑逆向。。。转向web，渗透（这方面尤其渗透才是自己比较感兴趣的）。没招了，寒假恶补web基础，首先学习php，sql，py，学好语言基础，kali渗透实战尝试。<br><img src="https://i.loli.net/2019/02/02/5c55a6fb28880.png" alt="还有寒假作业累"></p>
-</div><ul class="meta"><li><i class="icon icon-author"></i></li><li><i class="icon icon-clock"></i>0 Minutes</li><li><i class="icon icon-category"></i></li></ul></li><li> <p class="date">February 2, 2019</p><div class="no-title"><hr>
-<p>title: 记第一次搭建好狗窝<br>date: 2019-02-02 15:27:36</p>
-<h2 id="tags-杂"><a href="#tags-杂" class="headerlink" title="tags:杂"></a>tags:杂</h2><p>emmmmmmmmmmmm也不知道说啥<br>见习结束啦！哈哈哈哈！感觉最近都没学习。<br>下一步要好好学习了嘿嘿<br><img src="https://i.loli.net/2019/02/02/5c554cf7312c7.jpg" alt="见习结束了"></p>
-</div><ul class="meta"><li><i class="icon icon-author"></i></li><li><i class="icon icon-clock"></i>0 Minutes</li><li><i class="icon icon-category"></i></li></ul></li></ul><ul class="pagination"><li class="current"><a>1</a></li></ul><div class="page-footer"><div class="top"><ul class="social"><li><a href="https://github.com/Z3p5" title="Github" target="_blank"><i class="icon icon-github"></i></a></li><li><a href="http://space.bilibili.com/351207752?" title="Bilibili" target="_blank"><i class="icon icon-bilibili"></i></a></li><li><a href="https://i.loli.net/2019/02/03/5c56505a70706.png" title="Email" target="_blank"><i class="icon icon-email"></i></a></li><li><a href="https://i.loli.net/2019/02/02/5c54e137d2ffa.jpg" title="Wechat" target="_blank"><i class="icon icon-wechat"></i></a></li></ul></div><div class="bottom"><p class="copyright">© 2019 Yu'blog</p></div></div></div><script>var wrap = document.getElementById('wrap');
+</div><ul class="meta"><li><i class="icon icon-author"></i></li><li><i class="icon icon-clock"></i>1 Minutes</li><li><i class="icon icon-category"></i></li></ul></li></ul><ul class="pagination"><li class="current"><a>1</a></li><li class="link"><a href="/page/2/"><i class="icon icon-arror-right"></i></a></li></ul><div class="page-footer"><div class="top"><ul class="social"><li><a href="https://github.com/Z3p5" title="Github" target="_blank"><i class="icon icon-github"></i></a></li><li><a href="http://space.bilibili.com/351207752?" title="Bilibili" target="_blank"><i class="icon icon-bilibili"></i></a></li><li><a href="https://i.loli.net/2019/02/03/5c56505a70706.png" title="Email" target="_blank"><i class="icon icon-email"></i></a></li><li><a href="https://i.loli.net/2019/02/02/5c54e137d2ffa.jpg" title="Wechat" target="_blank"><i class="icon icon-wechat"></i></a></li></ul></div><div class="bottom"><p class="copyright">© 2019 Yu'blog</p></div></div></div><script>var wrap = document.getElementById('wrap');
 window.onload = function () {
   wrap.className += ' done';
 }</script></body></html>
