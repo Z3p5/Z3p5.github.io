@@ -1,0 +1,170 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta name="generator" content="Hexo 3.8.0"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"><meta name="format-detection" content="telephone=no"><meta name="format-detection" content="email=no"><meta name="description"><meta name="keywords" content="Hexo, Gruntjs, Nodejs, Reactjs, Vuejs"><title>Yu'blog</title><link rel="stylesheet" href="/css/main_style.min.css"><link rel="icon" href="/favicon.ico"></head><body><input id="navi" type="checkbox"><ul class="main-navication"><li><a href="/"><span>Home</span></a></li><li><a href="https://yu231050383.wordpress.com/"><span>photos</span></a></li><li><a href="https://www.baidu.com/"><span>Baidu</span></a></li><li><a href="http://blog.lyoo.xyz/"><span>BlueShadow'blog</span></a></li></ul><div class="wrapper" id="wrap"><div class="post-header"><label class="navi-button" for="navi">MENU</label><img class="background" src="https://i.loli.net/2019/02/02/5c554502b195c.jpg"><div class="post-title"><h1 class="title">随笔</h1><ul class="meta"><li><i class="icon icon-author"></i></li><li><i class="icon icon-clock"></i>2 Minutes</li><li><i class="icon icon-calendar"></i>March 22, 2019</li></ul></div></div><div class="article-content" style="max-width:800px"><hr>
+<p>title: md5绕过<br>date: 2019-03-22 16:22:32</p>
+<h2 id="tags-md5绕过"><a href="#tags-md5绕过" class="headerlink" title="tags:md5绕过"></a>tags:md5绕过</h2><p>#php处理0e开头md5哈希字符串 /bug<br>PHP在处理哈希字符串时，会利用”!=”或”==”来对哈希值进行比较，它把每一个以”0E”开头的哈希值都解释为0，所以如果两个不同的密码经过哈希以后，其哈希值都是以”0E”开头的，那么PHP将会认为他们相同，都是0。</p>
+<p>关于PHP hash比较缺陷详细介绍：<a href="http://www.freebuf.com/news/67007.html" target="_blank" rel="noopener">http://www.freebuf.com/news/67007.html</a></p>
+<pre><code>0x01 md5(str)
+
+QNKCDZO
+
+0e830400451993494058024219903391
+
+s878926199a
+
+0e545993274517709034328855841020
+
+s155964671a
+
+0e342768416822451524974117254469
+
+s214587387a
+
+0e848240448830537924465865611904
+
+s214587387a
+
+0e848240448830537924465865611904
+
+s878926199a
+
+0e545993274517709034328855841020
+
+s1091221200a
+
+0e940624217856561557816327384675
+
+s1885207154a
+
+0e509367213418206700842008763514
+
+s1502113478a
+
+0e861580163291561247404381396064
+
+s1885207154a
+
+0e509367213418206700842008763514
+
+s1836677006a
+
+0e481036490867661113260034900752
+
+s155964671a
+
+0e342768416822451524974117254469
+
+s1184209335a
+
+0e072485820392773389523109082030
+
+s1665632922a
+
+0e731198061491163073197128363787
+
+s1502113478a
+
+0e861580163291561247404381396064
+
+s1836677006a
+
+0e481036490867661113260034900752
+
+s1091221200a
+
+0e940624217856561557816327384675
+
+s155964671a
+
+0e342768416822451524974117254469
+
+s1502113478a
+
+0e861580163291561247404381396064
+
+s155964671a
+
+0e342768416822451524974117254469
+
+s1665632922a
+
+0e731198061491163073197128363787
+
+s155964671a
+
+0e342768416822451524974117254469
+
+s1091221200a
+
+0e940624217856561557816327384675
+
+s1836677006a
+
+0e481036490867661113260034900752
+
+s1885207154a
+
+0e509367213418206700842008763514
+
+s532378020a
+
+0e220463095855511507588041205815
+
+s878926199a
+
+0e545993274517709034328855841020
+
+s1091221200a
+
+0e940624217856561557816327384675
+
+s214587387a
+
+0e848240448830537924465865611904
+
+s1502113478a
+
+0e861580163291561247404381396064
+
+s1091221200a
+
+0e940624217856561557816327384675
+
+s1665632922a
+
+0e731198061491163073197128363787
+
+s1885207154a
+
+0e509367213418206700842008763514
+
+s1836677006a
+
+0e481036490867661113260034900752
+
+s1665632922a
+
+0e731198061491163073197128363787
+
+s878926199a
+
+0e545993274517709034328855841020
+
+
+0x02 md5(md5())
+
+0x03 md5(md5(str).&quot;SALT&quot;)
+2
+0e774261293712168181959463563504
+</code></pre><p> 转载自：<a href="http://www.cnblogs.com/Primzahl/p/6018158.html" target="_blank" rel="noopener">http://www.cnblogs.com/Primzahl/p/6018158.html</a></p>
+</div><div class="article-meta" style="max-width:800px"></div><div class="article-comment" style="max-width:800px"><div class="ds-thread" id="ds-thread" data-thread-key="cjtjt4npb0002og9m7inrhwuh" data-title="" data-url="http://yoursite.com/2019/03/22/md5绕过/" site-name="ueibo"></div><script>var siteName = document.getElementById('ds-thread').getAttribute('site-name');
+var duoshuoQuery = {short_name: siteName};
+(function() {
+  var ds = document.createElement('script');
+  ds.type = 'text/javascript';ds.async = true;
+  ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+  ds.charset = 'UTF-8';
+  (document.getElementsByTagName('head')[0] 
+  || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();</script></div><ul class="navication"><li class="home"><a href="/"><i class="icon icon-home"></i></a></li><li><a href="/2019/03/11/sql注入/"><i class="icon icon-arror-right"></i></a></li></ul><div class="page-footer"><div class="top"><ul class="social"><li><a href="https://github.com/Z3p5" title="Github" target="_blank"><i class="icon icon-github"></i></a></li><li><a href="http://space.bilibili.com/351207752?" title="Bilibili" target="_blank"><i class="icon icon-bilibili"></i></a></li><li><a href="https://i.loli.net/2019/02/03/5c56505a70706.png" title="Email" target="_blank"><i class="icon icon-email"></i></a></li><li><a href="https://i.loli.net/2019/02/02/5c54e137d2ffa.jpg" title="Wechat" target="_blank"><i class="icon icon-wechat"></i></a></li></ul></div><div class="bottom"><p class="copyright">© 2019 Yu'blog</p></div></div></div><script>var wrap = document.getElementById('wrap');
+window.onload = function () {
+  wrap.className += ' done';
+}</script></body></html>
