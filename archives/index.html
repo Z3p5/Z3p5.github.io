@@ -1,4 +1,17 @@
-<!DOCTYPE html><html lang="zh-cn"><head><meta name="generator" content="Hexo 3.8.0"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"><meta name="format-detection" content="telephone=no"><meta name="format-detection" content="email=no"><meta name="description"><meta name="keywords" content="Hexo, Gruntjs, Nodejs, Reactjs, Vuejs"><title>Yu'blog</title><link rel="stylesheet" href="/css/main_style.min.css"><link rel="icon" href="/favicon.ico"></head><body><input id="navi" type="checkbox"><ul class="main-navication"><li><a href="/"><span>Home</span></a></li><li><a href="https://yu231050383.wordpress.com/"><span>photos</span></a></li><li><a href="https://www.baidu.com/"><span>Baidu</span></a></li><li><a href="http://blog.lyoo.xyz/"><span>BlueShadow'blog</span></a></li></ul><div class="wrapper" id="wrap"><div class="page-header"><label class="navi-button" for="navi">MENU</label><div class="background"><img src="https://i.loli.net/2019/02/02/5c5543daeaefd.jpg"></div><div class="author"><div class="head"><img src="https://i.loli.net/2019/02/05/5c5962b9bf5a5.jpg"></div><h3 class="name"></h3><p class="signature">路虽远，行则必达；事虽难，做则必成。</p></div></div><ul class="post-list" style="max-width:800px"><li> <p class="date">March 22, 2019</p><div class="no-title"><hr>
+<!DOCTYPE html><html lang="zh-cn"><head><meta name="generator" content="Hexo 3.8.0"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"><meta name="format-detection" content="telephone=no"><meta name="format-detection" content="email=no"><meta name="description"><meta name="keywords" content="Hexo, Gruntjs, Nodejs, Reactjs, Vuejs"><title>Yu'blog</title><link rel="stylesheet" href="/css/main_style.min.css"><link rel="icon" href="/favicon.ico"></head><body><input id="navi" type="checkbox"><ul class="main-navication"><li><a href="/"><span>Home</span></a></li><li><a href="https://yu231050383.wordpress.com/"><span>photos</span></a></li><li><a href="https://www.baidu.com/"><span>Baidu</span></a></li><li><a href="http://blog.lyoo.xyz/"><span>BlueShadow'blog</span></a></li></ul><div class="wrapper" id="wrap"><div class="page-header"><label class="navi-button" for="navi">MENU</label><div class="background"><img src="https://i.loli.net/2019/02/02/5c5543daeaefd.jpg"></div><div class="author"><div class="head"><img src="https://i.loli.net/2019/02/05/5c5962b9bf5a5.jpg"></div><h3 class="name"></h3><p class="signature">路虽远，行则必达；事虽难，做则必成。</p></div></div><ul class="post-list" style="max-width:800px"><li> <p class="date">March 23, 2019</p><div class="no-title"><hr>
+<p>title: DOS攻击<br>date: 2019-03-23 10:55:43</p>
+<h2 id="tags"><a href="#tags" class="headerlink" title="tags:"></a>tags:</h2><p>拒绝服务攻击（英语：denial-of-service attack，缩写：DoS attack、DoS）亦称洪水攻击，是一种网络攻击手法，其目的在于使目标计算机的网络或系统资源耗尽，使服务暂时中断或停止，导致其正常用户无法访问。（维基百科）</p>
+<p>dos攻击的方法很多，大体分为五大类：</p>
+<ul>
+<li>耗尽计算机资源，如带宽、内存、磁盘空间、处理器时间。</li>
+<li>破坏配置信息，如路由信息。</li>
+<li>破环状态信息，如TCP链接中断。</li>
+<li>破坏网络硬件。</li>
+<li>破坏通信介质，阻挡正常通信。</li>
+</ul>
+<p>具体的攻击方法有很多，例如死亡之ping，SYN，ACK等是用自己的流量对等消耗服务器的流量，还有一种是泪滴攻击分片攻击，发送很小的数据包，服务器在接受这些数据包在内部会产生错误，这样服务器会消耗更多的流量百度百科有具体介绍<br><img src="https://i.loli.net/2019/03/23/5c9592ab7af4f.png" alt=""></p>
+<p>下面演示用一个工具进行简单的dos攻击<br>一个dos攻击的简单工具：<a href="https://github.com/GinjaChris/pentmenu" target="_blank" rel="noopener">pentmenu</a><br>首先nslookup解析获得网站的IP地址<br><img src="https://i.loli.net/2019/03/23/5c959fb5ca167.png" alt=""></p>
+</div><ul class="meta"><li><i class="icon icon-author"></i></li><li><i class="icon icon-clock"></i>0 Minutes</li><li><i class="icon icon-category"></i></li></ul></li><li> <p class="date">March 22, 2019</p><div class="no-title"><hr>
 <p>title: md5绕过<br>date: 2019-03-22 16:22:32</p>
 <h2 id="tags-md5绕过"><a href="#tags-md5绕过" class="headerlink" title="tags:md5绕过"></a>tags:md5绕过</h2><p>#php处理0e开头md5哈希字符串 /bug<br>PHP在处理哈希字符串时，会利用”!=”或”==”来对哈希值进行比较，它把每一个以”0E”开头的哈希值都解释为0，所以如果两个不同的密码经过哈希以后，其哈希值都是以”0E”开头的，那么PHP将会认为他们相同，都是0。</p>
 <p>关于PHP hash比较缺陷详细介绍：<a href="http://www.freebuf.com/news/67007.html" target="_blank" rel="noopener">http://www.freebuf.com/news/67007.html</a></p>
@@ -263,38 +276,7 @@ else:
 </div><ul class="meta"><li><i class="icon icon-author"></i></li><li><i class="icon icon-clock"></i>0 Minutes</li><li><i class="icon icon-category"></i></li></ul></li><li> <p class="date">February 13, 2019</p><div class="no-title"><hr>
 <p>layout: ‘n’<br>title: 发现笨办法学python3的两处错误<br>date: 2019-02-13 04:08:15</p>
 <h2 id="tags-python3"><a href="#tags-python3" class="headerlink" title="tags:python3"></a>tags:python3</h2><p>在习题28(布尔表达式练习）<br>第11个和第12个都漏了前引号，报错了，当时看起来别扭。</p>
-</div><ul class="meta"><li><i class="icon icon-author"></i></li><li><i class="icon icon-clock"></i>0 Minutes</li><li><i class="icon icon-category"></i></li></ul></li><li> <p class="date">February 10, 2019</p><div class="no-title"><hr>
-<p>title: pop<br>date: 2019-02-10 21:04:30</p>
-<h2 id="tags-python3"><a href="#tags-python3" class="headerlink" title="tags:python3"></a>tags:python3</h2><ul>
-<li>Python3 List pop()方法：</li>
-</ul>
-<p>pop() 函数用于移除列表中的一个元素（默认最后一个元素），并且返回该元素的值。<br>pop()方法语法：</p>
-<pre><code>list.pop([index=-1])
-</code></pre><p>参数：index – 可选参数，要移除列表元素的索引值，不能超过列表总长度，默认为 index=-1，删除最后一个列表值。</p>
-<p>返回值：从列表中移除的元素对象。</p>
-<pre><code>list1 = [&apos;Google&apos;, &apos;Runoob&apos;, &apos;Taobao&apos;]
-list1.pop()
-print (&quot;列表现在为 : &quot;, list1)
-list1.pop(1)
-print (&quot;列表现在为 : &quot;, list1)
-
-
-
-列表现在为 :  [&apos;Google&apos;, &apos;Runoob&apos;]
-列表现在为 :  [&apos;Google&apos;]
-</code></pre><p>可以通过下面这种方法打印 pop() 函数来显示返回值:</p>
-<pre><code>list1 = [&apos;Google&apos;, &apos;Runoob&apos;, &apos;Taobao&apos;]
-list_pop=list1.pop(1)
-print (&quot;删除的项为 :&quot;, list_pop)
-print (&quot;列表现在为 : &quot;, list1)
-
-
-
-
-删除的元素为 : Runoob
-列表现在为 :  [&apos;Google&apos;, &apos;Taobao&apos;]
-</code></pre><p><strong><em>返回值很重要</em></strong></p>
-</div><ul class="meta"><li><i class="icon icon-author"></i></li><li><i class="icon icon-clock"></i>1 Minutes</li><li><i class="icon icon-category"></i></li></ul></li></ul><ul class="pagination"><li class="current"><a>1</a></li><li class="link"><a href="/archives/page/2/"><i class="icon icon-arror-right"></i></a></li></ul><div class="page-footer"><div class="top"><ul class="social"><li><a href="https://github.com/Z3p5" title="Github" target="_blank"><i class="icon icon-github"></i></a></li><li><a href="http://space.bilibili.com/351207752?" title="Bilibili" target="_blank"><i class="icon icon-bilibili"></i></a></li><li><a href="https://i.loli.net/2019/02/03/5c56505a70706.png" title="Email" target="_blank"><i class="icon icon-email"></i></a></li><li><a href="https://i.loli.net/2019/02/02/5c54e137d2ffa.jpg" title="Wechat" target="_blank"><i class="icon icon-wechat"></i></a></li></ul></div><div class="bottom"><p class="copyright">© 2019 Yu'blog</p></div></div></div><script>var wrap = document.getElementById('wrap');
+</div><ul class="meta"><li><i class="icon icon-author"></i></li><li><i class="icon icon-clock"></i>0 Minutes</li><li><i class="icon icon-category"></i></li></ul></li></ul><ul class="pagination"><li class="current"><a>1</a></li><li class="link"><a href="/archives/page/2/"><i class="icon icon-arror-right"></i></a></li></ul><div class="page-footer"><div class="top"><ul class="social"><li><a href="https://github.com/Z3p5" title="Github" target="_blank"><i class="icon icon-github"></i></a></li><li><a href="http://space.bilibili.com/351207752?" title="Bilibili" target="_blank"><i class="icon icon-bilibili"></i></a></li><li><a href="https://i.loli.net/2019/02/03/5c56505a70706.png" title="Email" target="_blank"><i class="icon icon-email"></i></a></li><li><a href="https://i.loli.net/2019/02/02/5c54e137d2ffa.jpg" title="Wechat" target="_blank"><i class="icon icon-wechat"></i></a></li></ul></div><div class="bottom"><p class="copyright">© 2019 Yu'blog</p></div></div></div><script>var wrap = document.getElementById('wrap');
 window.onload = function () {
   wrap.className += ' done';
 }</script></body></html>
