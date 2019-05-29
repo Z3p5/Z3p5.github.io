@@ -1,4 +1,27 @@
 <!DOCTYPE html><html lang="zh-cn"><head><meta name="generator" content="Hexo 3.8.0"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"><meta name="format-detection" content="telephone=no"><meta name="format-detection" content="email=no"><meta name="description"><meta name="keywords" content="Hexo, Gruntjs, Nodejs, Reactjs, Vuejs"><title>Yu'blog</title><link rel="stylesheet" href="/css/main_style.min.css"><link rel="icon" href="/favicon.ico"></head><body><input id="navi" type="checkbox"><ul class="main-navication"><li><a href="/"><span>Home</span></a></li><li><a href="https://yu231050383.wordpress.com/"><span>photos</span></a></li><li><a href="https://www.baidu.com/"><span>Baidu</span></a></li><li><a href="http://blog.lyoo.xyz/"><span>BlueShadow'blog</span></a></li></ul><div class="wrapper" id="wrap"><div class="page-header"><label class="navi-button" for="navi">MENU</label><div class="background"><img src="https://i.loli.net/2019/02/02/5c5543daeaefd.jpg"></div><div class="author"><div class="head"><img src="https://i.loli.net/2019/04/10/5cadc00146f8e.jpg"></div><h3 class="name"></h3><p class="signature">路虽远，行则必达；事虽难，做则必成。</p></div></div><ul class="post-list" style="max-width:800px"><li> <p class="date">February 13, 2019</p><div class="no-title"><hr>
+<p>title: if / elif 的区别<br>date: 2019-02-13 04:37:39</p>
+<h2 id="tags-python3"><a href="#tags-python3" class="headerlink" title="tags:python3"></a>tags:python3</h2><pre><code>a=88
+if a&gt;= 90:
+   print u&quot;优秀&quot;
+if a == 88:
+    print u&quot;正好88&quot;
+if  a &gt;= 80:
+   print u&quot;良好&quot;
+else:
+   print u&quot;都不合格&quot;
+
+print &quot;* * &quot;*10
+
+if a&gt;= 90:
+    print u&quot;优秀&quot;
+elif a == 88:
+    print u&quot;正好88&quot;
+elif  a &gt;= 80:
+   print u&quot;良好&quot;
+else:
+   print u&quot;都不合格&quot;
+</code></pre><p>如果是用 if 的话，他会一直遍历完所有的if，不管你想判断的条件有没有遍历到，他都会继续执行完所有的if；而 elif 呢，则会比较快捷，主要还是看你的用处，如果你是想遍历到你的判断条件就不再执行其他判断条件分支语句，那么就用elif；elif 就是当走到符合查询条件的语句后，后面所有的elif和else就不会再被执行。<br>elif就是如果以上不符合走我这一步，依次累积。</p>
+</div><ul class="meta"><li><i class="icon icon-author"></i></li><li><i class="icon icon-clock"></i>0 Minutes</li><li><i class="icon icon-category"></i></li></ul></li><li> <p class="date">February 13, 2019</p><div class="no-title"><hr>
 <p>layout: ‘n’<br>title: 发现笨办法学python3的两处错误<br>date: 2019-02-13 04:08:15</p>
 <h2 id="tags-python3"><a href="#tags-python3" class="headerlink" title="tags:python3"></a>tags:python3</h2><p>在习题28(布尔表达式练习）<br>第11个和第12个都漏了前引号，报错了，当时看起来别扭。</p>
 </div><ul class="meta"><li><i class="icon icon-author"></i></li><li><i class="icon icon-clock"></i>0 Minutes</li><li><i class="icon icon-category"></i></li></ul></li><li> <p class="date">February 10, 2019</p><div class="no-title"><hr>
